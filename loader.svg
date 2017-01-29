@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+   viewBox="-10 10 20 20"
+   style="position:absolute; top:0; left:0; height: 20px; width: 20px"
+   onload="drawCircle();"> 
+  <script> 
+    function drawCircle() {
+        var i = 0;
+        var circle = document.getElementById("arc");
+        var angle = 0;
+        var radius = 5;     
+        window.timer = window.setInterval(
+        function() {
+            angle -=3;  
+            if(angle &lt; -400) window.clearInterval(timer);
+            //angle %= 360;
+            var radians= (angle/180) * Math.PI - 0.477  * Math.PI;
+            var x = Math.cos(radians) * radius;
+            var y = 20 + Math.sin(radians) * radius;
+            var e = circle.getAttribute("d");
+            if(i==0) {
+                var d = e+ " M "+x + " " + y;
+            }
+            else {
+                var d = e+ " L "+x + " " + y;
+            }  
+            circle.setAttribute("d", d);
+            i++;
+        } 
+      ,50)
+    }
+    </script> 
+
+    <path d="M20 0" id="arc" fill="none" stroke="orange" stroke-width="10" style="position: absolute; top:0; left:0;" />
+</svg>
+
+
