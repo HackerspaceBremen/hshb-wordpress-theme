@@ -128,7 +128,7 @@ body.customize-support #head-wrapper {
     left: 0;
     z-index: 1;
 }
-#fb, #gp, #tw, #yt, #rss, #app {
+#fb, #gp, #tw, #yt, #rss, #git {
     height: 26px;
     width: 26px;
     position: relative;
@@ -140,12 +140,12 @@ body.customize-support #head-wrapper {
     -o-transition: all 0.15s ease-in-out;
     -webkit-transition: all 0.15s ease-in-out;
 }
-#fb a, #gp a, #tw a, #yt a, #rss a, #app a {
+#fb a, #gp a, #tw a, #yt a, #rss a, #git a {
     display: block;
     height: 100%;
     width: 100%;
 }
-#fb:hover, #gp:hover, #tw:hover, #yt:hover, #rss:hover, #app:hover {
+#fb:hover, #gp:hover, #tw:hover, #yt:hover, #rss:hover, #git:hover {
     background-position: -26px 0;
 }
 #fb {
@@ -160,8 +160,8 @@ body.customize-support #head-wrapper {
 #yt {
     background-image: url('youtube.png');
 }
-#app {
-    background-image: url('app_net.png');
+#git {
+    background-image: url('github.png');
 }
 #rss {
     background-image: url('rss.png');
