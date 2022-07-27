@@ -265,7 +265,6 @@ div#menu > div > ul > li ul {
     position: absolute;
     top: 100%;
     left: -50px;
-    width: 180px;
     max-height: 0;
     border: 50px solid transparent;
     border-top: none;
@@ -343,7 +342,6 @@ div#menu > div > ul > li > ul li.current_page_item > a, div#menu > div > ul > li
 div#menu > div > ul > li li > ul {
     top: 0px;
     left: -230px ;
-    width: 180px;
     border-right: none !important;
 
 
