@@ -9,10 +9,9 @@
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/pixels.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts.js"></script>
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-        
+        <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
     </head>
     <body>
-	    <a href="http://hshb.de/diba" target="_blank" id="diba-banner"></a>
             <div id="head-wrapper">
                 <div id="header">
                     <div id="shadow_l"></div>
@@ -24,7 +23,7 @@
                         --><div id="tw"><a href="https://twitter.com/hspacehb" target="_blank"></a></div><!--
                         --><div id="yt"><a href="https://www.youtube.com/channel/UC8xYE7eRekFjhs9ysyoe6gQ" target="_blank"></a></div><!--
                         --><div id="git"><a href="https://github.com/HackerspaceBremen" target="_blank"></a></div><!--
-						--><div id="rss"><a href="https://www.hackerspace-bremen.de/feed" target="_blank"></a></div>
+                        --><div id="rss"><a href="https://www.hackerspace-bremen.de/feed" target="_blank"></a></div>
                     </div>
                     <div id="menu">
                         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
