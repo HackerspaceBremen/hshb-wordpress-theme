@@ -19,7 +19,6 @@
                     <div id="shadow_r"></div>
                     <div id="socials">
                         <div id="fb"><a href="https://www.facebook.com/pages/Hackerspace-Bremen/217887601561428/" target="_blank"></a></div><!--
-                        --><div id="gp"><a href="https://plus.google.com/106849621647585475724" target="_blank"></a></div><!--
                         --><div id="tw"><a href="https://twitter.com/hspacehb" target="_blank"></a></div><!--
                         --><div id="yt"><a href="https://www.youtube.com/channel/UC8xYE7eRekFjhs9ysyoe6gQ" target="_blank"></a></div><!--
                         --><div id="git"><a href="https://github.com/HackerspaceBremen" target="_blank"></a></div><!--
