@@ -40,7 +40,7 @@
 	font-size:2em;
 }
 
-.gce-page-grid .gce-calendar .gce-today{ /* Table cell that represents today */
+.gce-page-grid .gce-calendar .gce-today .now{ /* Table cell that represents today */
 	background-color:#DDDDDD;
 }
 
@@ -148,6 +148,10 @@
     font-size: 0.9em;
 }
 
+.gce-feed > div {
+    font-size: 0.9em;
+}
+
 .gce-widget-list .gce-list p{ /* Each piece of information in the list */
 	margin:0;
 }
@@ -176,9 +180,20 @@
     border-left: 4px solid #ddd;
 }
 
+.gce-feed div.not-now {
+    padding: 4px 0 4px 10px;
+    border-left: 4px solid #ddd;
+}
+
 .gce-list li.gce-today {
     border-left: 4px solid #00804d;
     background-color: #ddd;
+}
+
+.now {
+    border-left: 4px solid #00804d;
+    background-color: #ddd;
+    margin: -2px 0 -4px -14px;
 }
 
 .gce-today > ul > li > div.now {
