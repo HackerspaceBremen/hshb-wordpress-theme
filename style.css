@@ -140,12 +140,12 @@ body.customize-support #head-wrapper {
     -o-transition: all 0.15s ease-in-out;
     -webkit-transition: all 0.15s ease-in-out;
 }
-#fb a, #tw a, #yt a, #rss a, #git a {
+#fb a, #tw a, #yt a, #rss a, #git a, #ig a {
     display: block;
     height: 100%;
     width: 100%;
 }
-#fb:hover, #tw:hover, #yt:hover, #rss:hover, #git:hover {
+#fb:hover, #tw:hover, #yt:hover, #rss:hover, #git:hover, #ig:hover {
     background-position: -26px 0;
 }
 #fb {
