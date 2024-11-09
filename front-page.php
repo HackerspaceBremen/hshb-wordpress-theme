@@ -17,11 +17,11 @@
             var logo = createLogo(true);
             var rand = Math.random();
             if(rand < 0.33) {
-                $(window).load( function() { logo.showRandom(10, 200) });
+                jQuery(window).load( function() { logo.showRandom(10, 200) });
             } else if(rand < 0.66) {
-                $(window).load( function() { logo.showBottomTop(50, 200) });
+                jQuery(window).load( function() { logo.showBottomTop(50, 200) });
             } else {
-                $(window).load( function() { logo.showMoveLeft(200) });
+                jQuery(window).load( function() { logo.showMoveLeft(200) });
             }
             </script>
             <noscript><img id="pixel" src="<?php bloginfo('template_directory'); ?>/noscript.png" /></noscript>
