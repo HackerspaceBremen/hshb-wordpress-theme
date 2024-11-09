@@ -1,28 +1,21 @@
-<?php 
-/* 
-* Template Name: Keine Sidebar
-*/ $content_width = 930;
-get_header(); ?>
-    <style type="text/css">#sidebar-line { display: none !important;}  </style>
-    <div id="content-wrapper">
-        <div class="push-top"></div>
-        <div id="content" class="full">
-            <h1>404 Not found</h1>
-            <script type="text/javascript">
-            if(Math.random() < 0.25) {
-                var logo = create404Cock(true);
-            } else if (Math.random() < 0.5) {
-                var logo = create404Pussy(true);
-            } else if (Math.random() < 0.75) {
-                var logo = create404Bitch(true);
-            } else if (Math.random() <= 1) {
-                var logo = create404Ass(true);
-            }
-            logo.print();
-            $(window).load( function() { logo.showRandom(10, 100) });
-            </script>
-        </div><!-- content -->
-        <div class="push"></div>
-        <div class="clear"></div>
-    </div><!-- content-wrapper -->
-<?php get_footer(); ?>
+<?php
+get_header();
+
+$custom_404_page = get_page_by_title('404');
+
+// Überprüfen, ob die Seite gefunden wurde und deren Inhalt anzeigen
+if ($custom_404_page) {
+    echo '<div class="error-404">';
+    echo '<h1>' . esc_html($custom_404_page->post_title) . '</h1>';
+    echo apply_filters('the_content', $custom_404_page->post_content);
+    echo '</div>';
+} else {
+    // Fallback, falls die Seite nicht gefunden wird
+    echo '<div class="error-404">';
+    echo '<h1>Seite nicht gefunden</h1>';
+    echo '<p>Entschuldigung, die Seite konnte nicht geladen werden.</p>';
+    echo '</div>';
+}
+
+get_footer();
+?>
