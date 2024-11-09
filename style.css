@@ -152,7 +152,10 @@ body.customize-support #head-wrapper {
     background-image: url('facebook.png');
 }
 #tw {
-    background-image: url('twitter.png');
+  background-image: url('twitter.png');
+}
+#ig {
+  background-image: url('instagram.png');
 }
 #yt {
     background-image: url('youtube.png');
