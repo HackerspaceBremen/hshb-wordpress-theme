@@ -8,10 +8,10 @@ if ($custom_404_page) {
     echo '<div id="content-wrapper"><div class="push-top"></div><div id="content" class="full">';
     echo '<h1>' . esc_html($custom_404_page->post_title) . '</h1>';
     echo apply_filters('the_content', $custom_404_page->post_content);
-    echo '</div>';
+    echo '</div></div><div class="push"></div><div class="clear"></div></div><!-- content-wrapper -->';
 } else {
     // Fallback, falls die Seite nicht gefunden wird
-    echo '<div class="error-404">';
+    echo '<div id="content-wrapper"><div class="push-top"></div><div id="content" class="full">';
     echo '<h1>Seite nicht gefunden</h1>';
     echo '<p>Entschuldigung, die Seite konnte nicht geladen werden.</p>';
     echo '</div></div><div class="push"></div><div class="clear"></div></div><!-- content-wrapper -->';
