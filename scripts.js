@@ -356,49 +356,49 @@ function create404Ass(print) {
 
 function userToggle(id, check_others) {
     if(check_others === undefined) check_others = true;
-    if($('#user-' + id).css('height') != '0px') {
-        $('#user-' + id).animate({height:"0px"});
-        /*$('#arrow-' + id).animate({backgroundPositionY: "-18px"});*/
-        $({temporary_y: 1}).animate({temporary_y: -18}, {
+    if(jQuery('#user-' + id).css('height') != '0px') {
+        jQuery('#user-' + id).animate({height:"0px"});
+        /*jQuery('#arrow-' + id).animate({backgroundPositionY: "-18px"});*/
+        jQuery({temporary_y: 1}).animate({temporary_y: -18}, {
             duration: 400,
             step: function() {
                 var position = "50% " + Math.round(this.temporary_y) + "px";
-                $('#arrow-' + id).css("background-position",  position);
+                jQuery('#arrow-' + id).css("background-position",  position);
             }
         }).css('background-position', '50% -18px');
     } else {
-        if($('#user-' + id).html() == "") return; 
+        if(jQuery('#user-' + id).html() == "") return;
         
         if(check_others) {
             var my_id = id;
-            $('.user-bio').each( function() {
+            jQuery('.user-bio').each( function() {
                 var the_id = Number(this.id.split('-')[1]);
-                if(the_id != my_id && $(this).css('height') != '0px') userToggle(the_id, false);
+                if(the_id != my_id && jQuery(this).css('height') != '0px') userToggle(the_id, false);
             }); 
         }
     
-        $('#user-' + id).css('height', 'auto');
-        var autoheight = $('#user-' + id).height();
+        jQuery('#user-' + id).css('height', 'auto');
+        var autoheight = jQuery('#user-' + id).height();
         /*if(autoheight == 0) autoheight = 1;*/
-        $('#user-' + id).css('height', '0px').animate({height:autoheight + "px"});
-        /*$('#arrow-' + id).animate({backgroundPositionY: "1px"});*/
-        $({temporary_y: -18}).animate({temporary_y: 1}, {
+        jQuery('#user-' + id).css('height', '0px').animate({height:autoheight + "px"});
+        /*jQuery('#arrow-' + id).animate({backgroundPositionY: "1px"});*/
+        jQuery({temporary_y: -18}).animate({temporary_y: 1}, {
             duration: 400,
             step: function() {
                 var position = "50% " + Math.round(this.temporary_y) + "px";
-                $('#arrow-' + id).css("background-position",  position);
+                jQuery('#arrow-' + id).css("background-position",  position);
             }
         });
     }
 }
 
-$( document ).ready(function() {
-    $('div#menu > div > ul > li > a').click(function(event) {
-        $(event.target).parent().siblings().children().removeClass("open_menu");
-        $(event.target).siblings().toggleClass("open_menu");
+jQuery( document ).ready(function() {
+    jQuery('div#menu > div > ul > li > a').click(function(event) {
+        jQuery(event.target).parent().siblings().children().removeClass("open_menu");
+        jQuery(event.target).siblings().toggleClass("open_menu");
     });
     
-    $('div#menu > div > ul > li > ul > li a').click(function(event) {
-        $(event.target).siblings().toggleClass("open_submenu");
+    jQuery('div#menu > div > ul > li > ul > li a').click(function(event) {
+        jQuery(event.target).siblings().toggleClass("open_submenu");
     });
 });

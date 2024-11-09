@@ -41,7 +41,7 @@ function Pixels() {
         for (var i = 0; i < this.pixels.length; i++) {
             for (var k = 0; k < this.pixels[i].length; k++) {
                 if(this.pixels[i][k] === '' && !this.print_inactive) continue;
-                $("#" + this.id).append('<div class="pixel ' + (this.pixels[i][k] === '' ? 'inactive' : 'active') + '" id="' + this.id + '_' + i + '-' + k + '" style="position: absolute; display: none; top: ' + k * (this.height + this.paddingy) + 'px; left: ' + i * (this.width + this.paddingx) +'px; height: ' + this.height + 'px; width: ' + this.width + 'px; background-color:' + this.getColor(i, k) + '"></div>');
+                jQuery("#" + this.id).append('<div class="pixel ' + (this.pixels[i][k] === '' ? 'inactive' : 'active') + '" id="' + this.id + '_' + i + '-' + k + '" style="position: absolute; display: none; top: ' + k * (this.height + this.paddingy) + 'px; left: ' + i * (this.width + this.paddingx) +'px; height: ' + this.height + 'px; width: ' + this.width + 'px; background-color:' + this.getColor(i, k) + '"></div>');
             }
         }
     }
@@ -53,7 +53,7 @@ function Pixels() {
     this.toggleAll = function() {
         for (var i = 0; i < this.pixels.length; i++) {
             for (var k = 0; k < this.pixels[i].length; k++) {
-                $('#' + this.id + '_' + i + '-' + k).toggle();
+                jQuery('#' + this.id + '_' + i + '-' + k).toggle();
             }
         }
     };
@@ -61,7 +61,7 @@ function Pixels() {
     this.showLeftRight = function(delay, duration) {
         for (var i = 0; i < this.pixels.length; i++) {
             for (var k = 0; k < this.pixels[i].length; k++) {
-                $('#' + this.id + '_' + i + '-' + k).delay(delay*i).fadeIn(duration);
+                jQuery('#' + this.id + '_' + i + '-' + k).delay(delay*i).fadeIn(duration);
             }
         }
     };
@@ -69,7 +69,7 @@ function Pixels() {
     this.showTopBottom = function(delay, duration) {
         for (var i = 0; i < this.pixels.length; i++) {
             for (var k = 0; k < this.pixels[i].length; k++) {
-                $('#' + this.id + '_' + i + '-' + k).delay(delay*k).fadeIn(duration);
+                jQuery('#' + this.id + '_' + i + '-' + k).delay(delay*k).fadeIn(duration);
             }
         }
     };
@@ -77,13 +77,13 @@ function Pixels() {
     this.showRightLeft = function(delay, duration) {
         for (var i = 0; i < this.pixels.length; i++) {
             for (var k = 0; k < this.pixels[i].length; k++) {
-                $('#' + this.id + '_' + i + '-' + k).delay(delay*(this.pixels.length - i)).fadeIn(duration);
+                jQuery('#' + this.id + '_' + i + '-' + k).delay(delay*(this.pixels.length - i)).fadeIn(duration);
             }
         }
     };
     
     this.showMoveLeft_ = function(delay, iteration) {
-        $("#" + this.id).empty();
+        jQuery("#" + this.id).empty();
         
         this.createNew(this.pixels_m.length, this.pixels_m[0].length);
     
@@ -124,7 +124,7 @@ function Pixels() {
     this.showBottomTop = function(delay, duration) {
         for (var i = 0; i < this.pixels.length; i++) {
             for (var k = 0; k < this.pixels[i].length; k++) {
-                $('#' + this.id + '_' + i + '-' + k).delay(delay*(this.pixels[i].length - k)).slideDown(duration);
+                jQuery('#' + this.id + '_' + i + '-' + k).delay(delay*(this.pixels[i].length - k)).slideDown(duration);
             }
         }
     };
@@ -132,7 +132,7 @@ function Pixels() {
     this.hintBottomTop = function(delay, duration) {
         for (var i = 0; i < this.pixels.length; i++) {
             for (var k = 0; k < this.pixels[i].length; k++) {
-                $('#' + this.id + '_' + i + '-' + k).delay(delay*(this.pixels[i].length - k)).slideDown(duration).slideUp(duration);
+                jQuery('#' + this.id + '_' + i + '-' + k).delay(delay*(this.pixels[i].length - k)).slideDown(duration).slideUp(duration);
             }
         }
     };
@@ -159,10 +159,10 @@ function Pixels() {
         }
         actives = shuffleArray(actives);
         for(i = 0; i < actives.length; i++) {
-            $('#' + this.id + '_' + actives[i][0] + '-' + actives[i][1]).delay(delay*i).show(duration);
+            jQuery('#' + this.id + '_' + actives[i][0] + '-' + actives[i][1]).delay(delay*i).show(duration);
         }
         for(i = 0; i < inactives.length; i++) {
-            $('#' + this.id + '_' + inactives[i][0] + '-' + inactives[i][1]).delay(delay * actives.length + 0.1 * delay * i + duration).fadeIn(duration);
+            jQuery('#' + this.id + '_' + inactives[i][0] + '-' + inactives[i][1]).delay(delay * actives.length + 0.1 * delay * i + duration).fadeIn(duration);
         }
     };
 }
