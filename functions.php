@@ -33,7 +33,14 @@ function hshb_custom_is_support() {
 
 add_filter( 'infinite_scroll_archive_supported', 'hshb_custom_is_support' );
 
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ) {
     $content_width = 680;
+}
+
+// Dashicons laden
+function ww_load_dashicons(){
+    wp_enqueue_style('dashicons');
+}
+add_action('wp_enqueue_scripts', 'ww_load_dashicons');
     
 ?>
