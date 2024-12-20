@@ -977,23 +977,12 @@ a img.aligncenter {
 
 /* Calendar Sidebar */
 
-.now {
-  border-left: 4px solid #00804d;
-  background-color: #ddd;
-  margin: -2px 0 -4px -14px;
-  padding: 2px 0 4px 10px;
-}
-
 .simcal-default-calendar-list ul.simcal-events {
   margin: 0;
   padding: 0;
 }
 
-.simcal-event-details br {
-  display: none;
-}
-
-.simcal-event-details p {
+.simcal-default-calendar-list .simcal-event-details p {
   margin: 0;
 }
 
