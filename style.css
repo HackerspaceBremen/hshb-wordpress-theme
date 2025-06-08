@@ -186,7 +186,8 @@ body.customize-support #head-wrapper {
 #yt,
 #ig,
 #rss,
-#git {
+#git,
+#matrix {
   height: 26px;
   width: 26px;
   position: relative;
