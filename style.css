@@ -203,7 +203,8 @@ body.customize-support #head-wrapper {
 #yt a,
 #rss a,
 #git a,
-#ig a {
+#ig a,
+#matrix a, {
   display: block;
   height: 100%;
   width: 100%;
