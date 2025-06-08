@@ -213,7 +213,8 @@ body.customize-support #head-wrapper {
 #yt:hover,
 #rss:hover,
 #git:hover,
-#ig:hover {
+#ig:hover,
+#matrix:hover {
   background-position: -26px 0;
 }
 #fb {
@@ -233,6 +234,9 @@ body.customize-support #head-wrapper {
 }
 #rss {
   background-image: url("rss.png");
+}
+#matrix {
+  background-image: url("matrix.png");
 }
 /* Tooltip */
 a.tooltip strong {

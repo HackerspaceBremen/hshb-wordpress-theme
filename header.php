@@ -23,6 +23,7 @@
                         --><div id="ig"><a href="https://www.instagram.com/hackerspace_bremen/" target="_blank"></a></div><!--
                         --><div id="yt"><a href="https://www.youtube.com/channel/UC8xYE7eRekFjhs9ysyoe6gQ" target="_blank"></a></div><!--
                         --><div id="git"><a href="https://github.com/HackerspaceBremen" target="_blank"></a></div><!--
+                        --><div id="matrix"><a href="https://matrix.to/#/#hshb-public:hackerspace-bremen.de" target="_blank"></a></div><!--
                         --><div id="rss"><a href="https://www.hackerspace-bremen.de/feed" target="_blank"></a></div>
                     </div>
                     <div id="menu">
