@@ -1,0 +1,41 @@
+name: Continuous Integration
+
+on:
+  push:
+  pull_request:
+  release:
+    types:
+      - "published"
+
+jobs:
+  ci-linux:
+    name: CI Linux
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Composer
+        uses: php-actions/composer@v6
+        with:
+          dev: no
+          args: --optimize-autoloader
+      - name: Build
+        run: |
+          sudo apt-get install npm -y
+          npm install
+          npm run build
+          tar -zcvf theme.tgz . --exclude=./node_modules
+        shell: bash
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: built theme
+          path: |
+            theme.tgz
+      - name: Upload release
+        if: ${{ github.event_name == 'release' }}
+        uses: alexellis/upload-assets@0.4.1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          asset_paths: '["theme.tgz"]'

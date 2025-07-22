@@ -1,7 +1,4 @@
-import.meta.glob([
-  '../images/**',
-  '../fonts/**',
-]);
+import.meta.glob(["../images/**", "../fonts/**"]);
 
 (function () {
   const theme = localStorage.getItem("theme");

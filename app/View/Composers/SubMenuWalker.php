@@ -56,4 +56,3 @@ class Sub_Menu_Walker extends Walker_Nav_Menu
 }
 
 ?>
-

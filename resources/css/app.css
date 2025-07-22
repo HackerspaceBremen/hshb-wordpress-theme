@@ -1,6 +1,8 @@
 @import "tailwindcss" theme(static);
 @plugin "daisyui" {
-  themes: hshblight --default, hshbdark --prefersdark;
+  themes:
+    hshblight --default,
+    hshbdark --prefersdark;
 }
 
 @plugin "daisyui/theme" {
@@ -143,14 +145,15 @@
     display: block;
   }
 
-  textarea, input {
+  textarea,
+  input {
     max-width: 100%;
     background: rgba(0, 0, 0, 0.2);
     padding: 0.5rem;
     margin-bottom: 1rem;
   }
 
-  input[type=submit] {
+  input[type="submit"] {
     margin: 0;
   }
 }
