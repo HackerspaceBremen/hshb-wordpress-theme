@@ -24,7 +24,7 @@ jobs:
           sudo apt-get install npm -y
           npm install
           npm run build
-          tar -zcvf /tmp/theme.tgz --exclude=./node_modules .
+          tar -zcvf /tmp/theme.tgz --exclude=./node_modules --exclude=./.git --exclude=./.github .
           cp /tmp/theme.tgz .
         shell: bash
       - name: Upload artifact

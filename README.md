@@ -10,4 +10,4 @@ $ npm install
 $ npm run build
 ```
 
-Then upload everything except `node_modules` to WordPress (see [documentation](https://roots.io/sage/docs/deployment/)).
+Then upload everything except `node_modules/`/`.git`/`.github` to WordPress (see [documentation](https://roots.io/sage/docs/deployment/)). You can also use prebuilt versions from the GitHub Releases or Action runs.
