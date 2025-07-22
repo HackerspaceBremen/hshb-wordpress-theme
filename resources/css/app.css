@@ -1,0 +1,180 @@
+@import "tailwindcss" theme(static);
+@plugin "daisyui" {
+  themes: hshblight --default, hshbdark --prefersdark;
+}
+
+@plugin "daisyui/theme" {
+  name: "hshblight";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(1 0.04 142.664);
+  --color-base-300: oklch(0.82 0.081 142.664);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: oklch(0.373 0.063 202.569);
+  --color-primary-content: oklch(0.82 0.081 142.664);
+  --color-secondary: oklch(0.614 0.211 33.937);
+  --color-secondary-content: oklch(100% 0 0);
+  --color-accent: oklch(77% 0.152 181.912);
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(0.373 0.063 202.569);
+  --color-neutral-content: oklch(100% 0 0);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 2rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+
+  --link-color: oklch(0.499 0.169 35.207);
+}
+
+@plugin "daisyui/theme" {
+  name: "hshbdark";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: oklch(20.84% 0.008 17.911);
+  --color-base-200: oklch(18.522% 0.007 17.911);
+  --color-base-300: oklch(16.203% 0.007 17.911);
+  --color-base-content: oklch(83.768% 0.001 17.911);
+  --color-primary: oklch(0.82 0.081 142.664);
+  --color-primary-content: oklch(0.373 0.063 202.569);
+  --color-secondary: oklch(0.614 0.211 33.937);
+  --color-secondary-content: oklch(100% 0 0);
+  --color-accent: oklch(43% 0 0);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(0.373 0.063 202.569);
+  --color-neutral-content: oklch(100% 0 0);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(79% 0.209 151.711);
+  --color-success-content: oklch(26% 0.065 152.934);
+  --color-warning: oklch(84.8% 0.1962 84.62);
+  --color-warning-content: oklch(44.8% 0.1962 84.62);
+  --color-error: oklch(65% 0.1985 24.22);
+  --color-error-content: oklch(27% 0.1985 24.22);
+  --radius-selector: 2rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+
+  --link-color: oklch(0.614 0.211 33.937);
+}
+
+@source "../views/";
+@source "../../app/";
+
+@layer base {
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: bolder;
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    font-weight: bolder;
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+  }
+}
+
+.main {
+  h2 {
+    margin-top: var(--text-2xl);
+  }
+
+  h3 {
+    margin-top: var(--text-xl);
+  }
+}
+
+.alignright {
+  float: right;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .menu-item {
+  display: inline;
+}
+
+.simcal-calendar {
+  padding: 0;
+}
+
+.inner-content a:not(.btn) {
+  color: var(--link-color);
+  word-wrap: break-word;
+}
+
+.comment {
+  margin-top: 1rem;
+}
+
+.comment-form {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+
+  label {
+    display: block;
+  }
+
+  textarea, input {
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  input[type=submit] {
+    margin: 0;
+  }
+}
+
+.comment-list {
+  font-size: 90%;
+
+  .comment-body {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+
+    .comment-author {
+      display: inline-block;
+      margin-bottom: 0.3rem;
+    }
+
+    .comment-metadata {
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  .children {
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+  }
+}
