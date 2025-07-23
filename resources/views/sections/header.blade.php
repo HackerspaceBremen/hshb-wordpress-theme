@@ -5,7 +5,7 @@
       <div class="navbar fixed z-10000 bg-[#014A4F] border-b-4 border-b-[#e73e14] shadow-sm">
         <div class="flex-1 join">
           <a role="button" class="btn btn-square join-item"
-             href="https://mastodon.social/@hackerspace_bremen"
+             href="https://mastodon.social/@hspacehb"
              target="_blank"
              rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" class="size-[1.4em]" viewBox="-2 -2 28 28"><title>Mastodon</title>
