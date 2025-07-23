@@ -8,6 +8,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="icon" type="image/x-icon" href="{{ Vite::asset('resources/images/favicon.ico') }}">
+    <link href="https://mastodon.social/@hspacehb" rel="me">
   </head>
 
   <body @php(body_class())>
