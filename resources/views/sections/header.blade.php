@@ -106,7 +106,7 @@
       </div>
     </div>
   </div>
-  <div class="drawer-side z-11000">
+  <div class="drawer-side z-100000">
     <label for="side-menu-drawer" aria-label="Schließen" class="drawer-overlay"></label>
     <div class="bg-base-200 text-base-content min-h-full w-100 p-4 max-w-[80vw]">
       @if (has_nav_menu('primary_navigation'))
