@@ -181,3 +181,18 @@
     margin-left: 2.5rem;
   }
 }
+
+.e-content {
+  ol,
+  ul {
+    padding-left: 2rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+}
