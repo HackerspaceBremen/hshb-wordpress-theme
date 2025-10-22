@@ -182,7 +182,8 @@
   }
 }
 
-.e-content {
+.e-content,
+.entry-summary {
   ol,
   ul {
     padding-left: 2rem;
